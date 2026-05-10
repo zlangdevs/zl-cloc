@@ -9835,6 +9835,7 @@ sub set_constants {                          # {{{1
             'yang'        => 'Yang'                  ,
             'yarn'        => 'Yarn'                  ,
             'zig'         => 'Zig'                   ,
+            'zl'          => 'ZLang'                 ,
             'zsh'         => 'zsh'                   ,
             'rego'        => 'Rego'                  ,
             'bb'          => 'BitBake'               ,
@@ -11815,6 +11816,11 @@ sub set_constants {                          # {{{1
                                 [ 'remove_matches'      , '^\s*//'  ],
                                 [ 'remove_inline'       , '//.*$'   ],
                             ],
+    'ZLang'              => [
+                                [ 'remove_matches'      , '^\s*\?\?' ],
+                                [ 'remove_inline'       , '\?\?.*$' ],
+                                [ 'remove_between_general', '...', '...' ],
+                            ],
     'zsh'                => [
                                 [ 'remove_matches'      , '^\s*#'  ],
                                 [ 'remove_inline'       , '#.*$'   ],
@@ -12445,6 +12451,7 @@ sub set_constants {                          # {{{1
     'Xtend'                        => 2.00,
     'Yang'                         => 3.00,
     'Zig'                          => 2.50,
+    'ZLang'                        => 2.50,
     "Rego"                         => 1.00,
     "BitBake"                      => 1.00,
     # aggregates; value is meaningless
